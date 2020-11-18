@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy of computers</title>
+    <link rel="stylesheet" href="W3.css">
+</head>
+<body>
+
+    <h1 class="w3-center">White Rhino School</h1>
+    <div class="w3-bar w3-teal">
+        
+   
+        <a href="/computerp.html" class="w3-bar-item w3-button">Computer packages</a></li>
+        <a href="#" class="w3-bar-item w3-button">HTML</a>
+        <a href="#" class="w3-bar-item w3-button" >CSS</a>
+        <a href="#" class="w3-bar-item w3-button">JAVASCRIPT</a>
+        <a href="#" class="w3-bar-item w3-button">WEB DEVELOPMENT</a>
+    
+   
+</div>
+
+    <div class='w3-sidebar w3-bar-block'style="width:25%" >
+        
+        <a href="compintro.html"  class="w3-bar-item w3-button">Introduction to computers</a>
+        <a href="anatomy.html"  class="w3-bar-item w3-button">Anatomy of computers</a>
+        <a href="overview.html"  class="w3-bar-item w3-button">Overview of computer output </a>
+        <a href="types.html" class="w3-bar-item w3-button" >Types of software</a>
+        <a href="operating.html"  class="w3-bar-item w3-button">Operating system</a>
+        <a href="dos.html"  class="w3-bar-item w3-button">DOS commands</a>
+        <a href="windows.html"  class="w3-bar-item w3-button">WINDOWS</a>
+        <a href="windowsex.html"  class="w3-bar-item w3-button">WINDOWS explorer</a>
+        <a href="msword.html"  class="w3-bar-item w3-button">MSWORD</a>
+        <a href="msexcel.html" class="w3-bar-item w3-button" >MSEXCEL</a>
+        <a href="msaccess.html"  class="w3-bar-item w3-button">MSACCESS</a>
+        <a href="emailnet.html"  class="w3-bar-item w3-button">Email and Internet</a>
+        <a href="zoom.html"  class="w3-bar-item w3-button">ZOOM MEETINGS </a>
+        </div>
+        
+    <!-- Page Content -->
+<div style="margin-left:25%">
+
+    <div class="w3-container w3-lime">
+      <h1>Anatomy of computers</h1>
+    </div>
+    <div>
+        main content
+    </div>
+    <div>
+        <a href="compintro.html" class="w3-button w3-teal">&#8249;previous chapter</a>
+<a href="overview.html" class="w3-button w3-teal">next chapter&#8250;</a>
+  
+    </div>
+
+    <div id="main">
+        <div id="w3-header w3-red">
+        <h1>Introduction to computers Quiz</h1>
+        </div>
+        <form id="form1">
+        
+        <h2>Which is the best description of a variable?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Identifies a portion of a string.</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />A method to join strings.</label>
+        <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />Allows you to store information so it can be reused throughout the program</label>
+        <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>Allows you to make a decision based on a condition.</label>
+        
+        <h2>Which is the best description of the substring method?</h2>
+        <label for="sub_string"><input type="radio" name="sub" value="25" id="sub_string"/>Identifies a portion of a string.</label>
+        <label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>A method to join strings.</label>
+        <label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />Allows you to store information so it can be reused throughout the program</label>
+        <label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />Allows you to make a decision based on a condition.</label>
+        
+        <h2>Which is the best description of concatenation?</h2>
+        <label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Identifies a portion of a string.</label>
+        <label for="cat_join"><input type="radio" name="con" value="25" id="cat_join" />A method to join strings.</label>
+        <label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />Allows you to store information so it can be reused throughout the program</label>
+        <label for="cat_condition"><input type="radio" name="con" value="0" id="cat_condition" />Allows you to make a decision based on a condition.</label>
+        
+        <h2>Which is the best description of an if statement?</h2>
+        <label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Identifies a portion of a string.</label>
+        <label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />A method to join strings.</label>
+        <label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />Allows you to store information so it can be reused throughout the program</label>
+        <label for="if_condition"><input type="radio" name="ifstate"  value="25" id="if_condition" />Allows you to make a decision based on a condition.</label>
+        
+        <button type="submit" value="Submit">Submit</button>
+        
+        </form>
+            
+        <p>Your grade is: <span id="grade">__</span></p>
+        <p id="grade2"></p>
+
+
+        <script>
+            document.getElementById("form1").onsubmit=function() {
+                   variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+                   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+                   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+                   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+                   
+                   
+                   result = variable + sub + con + ifstate;
+                   
+                document.getElementById("grade").innerHTML = result;
+            
+             grading = [
+                   {score:0,feedback:"I don't think you studied", image: "none.jpg"},
+                   {score:25,feedback:"You need to spend more time. Try again", image: "poor.jpg"},
+                   {score:50,feedback:"I think you could do better. Try again.", image: "avg.jpg"},
+                   {score:75,feedback:"So close. Try again.", image: "above.jpg"},
+                   {score:100,feedback:"Excellent! You're a JavaScript pro!", image: "excellent.jpg"}
+                   ];
+                  
+            for(i=0; i<grading.length; i++) {
+                if(result == grading[i].score) {
+                result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
+                  }
+                  }
+            
+            
+            document.getElementById("grade2").innerHTML = result2; 
+            
+            return false; // required to not refresh the page; just leave this here
+            } //this ends the submit function
+            
+            </script>
+            
+            
+            </div>
+            <a href="compintro.html" class="w3-button w3-teal">&#8249;previous chapter</a>
+            <a href="overview.html" class="w3-button w3-teal">next chapter&#8250;</a>
+
+
+    
+</body>
+</html>
